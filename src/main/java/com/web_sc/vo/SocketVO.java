@@ -9,13 +9,10 @@ public class SocketVO {
     // 메시지의 내용을 저장하기 위한 변수
     private String content;
 
-    private String type;
-
-    public SocketVO(String roomId, String userName, String content, String type) {
+    public SocketVO(String roomId, String userName, String content) {
         this.roomId = roomId;
         this.userName = userName;
         this.content = content;
-        this.type = type;
     }
 
     public String getUserName() {
@@ -43,20 +40,11 @@ public class SocketVO {
         this.roomId = roomId;
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
     @Override
     public String toString() {
         return "SocketVO{" +
                 "roomId='" + roomId + '\'' +
                 ", userName='" + userName + '\'' +
-                ", type='" + type + '\'' +
                 ", content='" + content + '\'' +
                 '}';
     }
