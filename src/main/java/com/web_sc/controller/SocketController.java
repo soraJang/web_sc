@@ -18,9 +18,16 @@ public class SocketController {
     @Autowired
     private SimpMessagingTemplate simpMessagingTemplate;
 
+
     @MessageMapping("/hello/{roomId}")
     public SocketVO greeting(@DestinationVariable("roomId") String roomId, SocketVO message) throws Exception {
-        simpMessagingTemplate.convertAndSend("/topic/" + roomId , message);
+        simpMessagingTemplate.convertAndSend("/topic/" + roomId, message);
+        return message;
+    }
+
+    @MessageMapping("/hello")
+    public SocketVO greeting(SocketVO message) throws Exception {
+        simpMessagingTemplate.convertAndSend("/topic", message);
         return message;
     }
 }
