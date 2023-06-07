@@ -23,5 +23,11 @@ public class SocketController {
         simpMessagingTemplate.convertAndSend("/topic/" + roomId , message);
         return message;
     }
+
+    @MessageMapping("/hello")
+    public SocketVO greeting(SocketVO message) throws Exception {
+        simpMessagingTemplate.convertAndSend("/topic" , message);
+        return message;
+    }
 }
 
