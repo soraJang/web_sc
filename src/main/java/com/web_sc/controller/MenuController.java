@@ -1,7 +1,6 @@
 package com.web_sc.controller;
 
 import com.web_sc.vo.MusicVO;
-import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -10,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.*;
 
 @RestController
