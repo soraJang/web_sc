@@ -1,6 +1,5 @@
 package com.web_sc.controller;
 
-import com.web_sc.service.SocketService;
 import com.web_sc.vo.SocketVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
@@ -10,11 +9,6 @@ import org.springframework.stereotype.Controller;
 
 @Controller
 public class SocketController {
-
-    @Autowired
-    SocketService socketService;
-
-
     @Autowired
     private SimpMessagingTemplate simpMessagingTemplate;
 
